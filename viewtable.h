@@ -5,6 +5,9 @@
 #include <QSqlTableModel>
 #include <QTableView>
 #include <QDebug>
+#include <QtSql>
+#include <QMouseEvent>
+#include <QShortcut>
 
 namespace Ui {
 class viewTable;
@@ -18,8 +21,20 @@ public:
     QString group;
     QSqlDatabase db = QSqlDatabase::database("db_conn");
     QSqlTableModel *sql_view;
+    QTableView *t;
     explicit viewTable(QWidget *parent = 0, QString gr = "");
     ~viewTable();
+
+private slots:
+    void editActivated();
+
+    void onDoubleClick(const QModelIndex &idx);
+
+    void on_btn_Search_clicked();
+
+    void on_btn_Reset_clicked();
+
+    void on_btn_adminLogToday_clicked();
 
 private:
     Ui::viewTable *ui;

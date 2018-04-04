@@ -50,5 +50,5 @@ void AddMovie::on_btn_addMovie_clicked()
     query = QString("INSERT INTO `moviedb` (name, director, country, studio, release_date, synopsis) "
                     "VALUES ('%1', '%2', '%3', '%4', '%5', '%6');").arg(name).arg(dir)
             .arg(coun).arg(stud).arg(release).arg(synop);
-    qDebug() << q.exec(query);
+    q.exec(query);
 }
