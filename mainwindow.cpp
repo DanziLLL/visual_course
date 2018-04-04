@@ -11,6 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     db.setPassword("interstellar");
     db.open();
     ui->setupUi(this);
+    ui->login->setFocus();
+    ui->btn_go->setDefault(true);
 }
 
 MainWindow::~MainWindow()

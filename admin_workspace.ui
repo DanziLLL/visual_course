@@ -32,7 +32,7 @@
   <widget class="QPushButton" name="btn_AddMovie">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>20</x>
      <y>20</y>
      <width>84</width>
      <height>28</height>
@@ -40,6 +40,32 @@
    </property>
    <property name="text">
     <string>Add movie</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ChangeAdPicture">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>141</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Change ad picture</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ViewMovieDb">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>151</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View movie database</string>
    </property>
   </widget>
  </widget>

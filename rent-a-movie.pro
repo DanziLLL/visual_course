@@ -17,16 +17,19 @@ SOURCES += \
         mainwindow.cpp \
     admin_workspace.cpp \
     user_workspace.cpp \
-    addmovie.cpp
+    addmovie.cpp \
+    viewtable.cpp
 
 HEADERS += \
         mainwindow.h \
     admin_workspace.h \
     user_workspace.h \
-    addmovie.h
+    addmovie.h \
+    viewtable.h
 
 FORMS += \
         mainwindow.ui \
     admin_workspace.ui \
     user_workspace.ui \
-    addmovie.ui
+    addmovie.ui \
+    viewtable.ui
