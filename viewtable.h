@@ -42,6 +42,8 @@ private slots:
 
     void on_btn_adminLogOverdue_clicked();
 
+    void on_btn_showFavorites_clicked();
+
 private:
     Ui::viewTable *ui;
 

@@ -126,5 +126,18 @@ void viewTable::on_btn_adminLogOverdue_clicked()
 
 void viewTable::keyPressEvent(QKeyEvent *event) {
     int key = event->key();
-    qDebug() << key;
+    if (key == 70) { //Ctrl+F to mark as favorite
+        qDebug() << "QUERY TO FAV";
+        t->setCurrentIndex(t->model()->index(t->currentIndex().row(), 0));
+        QString movieid = t->currentIndex().data().toString();
+        QSqlQuery q(db);
+        q.exec(QString("INSERT INTO `favorites` (`user`, `movie_id`) VALUES ('%1', '%2')").arg(user).arg(movieid));
+    }
+}
+
+void viewTable::on_btn_showFavorites_clicked()
+{
+    sql_view->setTable("favorites");
+    sql_view->select();
+    sql_view->setFilter(QString("`user` = %1").arg(user));
 }
