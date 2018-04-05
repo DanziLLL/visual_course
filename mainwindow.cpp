@@ -36,9 +36,9 @@ void MainWindow::on_btn_go_clicked()
             a->show();
         }
         else if (q.value(1).toString() == "users") {
-            User_workspace *u = new User_workspace();
+            viewTable *v = new viewTable(NULL, q.value(1).toString(), ui->login->text());
             this->hide();
-            u->show();
+            v->show();
         }
         else {
             QMessageBox::critical(this, "Error", "Не установлена группа пользователя");

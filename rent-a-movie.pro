@@ -18,18 +18,21 @@ SOURCES += \
     admin_workspace.cpp \
     user_workspace.cpp \
     addmovie.cpp \
-    viewtable.cpp
+    viewtable.cpp \
+    adduser.cpp
 
 HEADERS += \
         mainwindow.h \
     admin_workspace.h \
     user_workspace.h \
     addmovie.h \
-    viewtable.h
+    viewtable.h \
+    adduser.h
 
 FORMS += \
         mainwindow.ui \
     admin_workspace.ui \
     user_workspace.ui \
     addmovie.ui \
-    viewtable.ui
+    viewtable.ui \
+    adduser.ui

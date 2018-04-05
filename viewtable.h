@@ -8,6 +8,8 @@
 #include <QtSql>
 #include <QMouseEvent>
 #include <QShortcut>
+#include <QImage>
+#include <QLabel>
 
 namespace Ui {
 class viewTable;
@@ -18,11 +20,13 @@ class viewTable : public QDialog
     Q_OBJECT
 
 public:
-    QString group;
+    QString group, user;
     QSqlDatabase db = QSqlDatabase::database("db_conn");
     QSqlTableModel *sql_view;
     QTableView *t;
-    explicit viewTable(QWidget *parent = 0, QString gr = "");
+    QLabel *img;
+    explicit viewTable(QWidget *parent = 0, QString gr = "", QString usr = "");
+    void rentedMovies();
     ~viewTable();
 
 private slots:
@@ -36,8 +40,13 @@ private slots:
 
     void on_btn_adminLogToday_clicked();
 
+    void on_btn_adminLogOverdue_clicked();
+
 private:
     Ui::viewTable *ui;
+
+protected:
+   virtual void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // VIEWTABLE_H

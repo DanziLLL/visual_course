@@ -36,3 +36,9 @@ void Admin_workspace::on_btn_ViewMovieDb_clicked()
     t->show();
     this->hide();
 }
+
+void Admin_workspace::on_btn_addUser_clicked()
+{
+    add = new addUser(this);
+    add->show();
+}

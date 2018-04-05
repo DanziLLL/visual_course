@@ -106,6 +106,19 @@
     <string>RENT LOG TODAY</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_adminLogOverdue">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>280</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>RENT LOG OVERDUE</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

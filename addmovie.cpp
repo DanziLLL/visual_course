@@ -51,4 +51,7 @@ void AddMovie::on_btn_addMovie_clicked()
                     "VALUES ('%1', '%2', '%3', '%4', '%5', '%6');").arg(name).arg(dir)
             .arg(coun).arg(stud).arg(release).arg(synop);
     q.exec(query);
+    query = QString("INSERT INTO `rent_log` (name, date_start, date_end, date_return, user) "
+                    "VALUES ('%1', CURDATE(), CURDATE(), CURDATE(), 'admin');").arg(name);
+    q.exec(query);
 }

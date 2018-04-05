@@ -126,5 +126,10 @@ void viewTable::on_btn_adminLogOverdue_clicked()
 
 void viewTable::keyPressEvent(QKeyEvent *event) {
     int key = event->key();
-    qDebug() << key;
+    if (key == 70) { //Ctrl+F to mark as favorite
+        qDebug() << "QUERY TO FAV";
+        QString moviename = t->setCurrentIndex(t->model()->index(t->currentIndex().row(), 1, , QItemSelectionModel::Select));
+        QSqlQuery q(db);
+        q.exec();
+    }
 }
