@@ -10,6 +10,9 @@
 #include <QShortcut>
 #include <QImage>
 #include <QLabel>
+#include <QMessageBox>
+#include <ratemovie.h>
+
 
 namespace Ui {
 class viewTable;

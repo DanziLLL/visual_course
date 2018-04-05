@@ -12,3 +12,12 @@ rateMovie::~rateMovie()
 {
     delete ui;
 }
+
+void rateMovie::on_buttonBox_accepted()
+{
+    rating = ui->spinBox->value();
+}
+
+int rateMovie::getValue() {
+    return rating;
+}

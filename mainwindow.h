@@ -6,7 +6,6 @@
 #include <QDebug>
 #include <QCryptographicHash>
 #include <admin_workspace.h>
-#include <user_workspace.h>
 #include <QMessageBox>
 
 namespace Ui {
